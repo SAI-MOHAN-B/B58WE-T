@@ -10,21 +10,22 @@ var request =  new XMLHttpRequest()
 // This method tells us that which HTTP method as well as Which API
 request.open("GET","https://restcountries.com/v3.1/all")
 
-
 // Step 03:
 // KickStart the HTTP Operations
 request.send()
-
-
 //Step 04:
 // Once the data has been successfully received from the server
 // if the status code of the server is 200
 // then we need to process the data
-
 
 //here the JSON.parse converts the JSON string into array of Objects
 request.onload = function(){
     // here the conversion of string to objects
      var res = JSON.parse(request.response)
      console.log(res);
+// Print the Regions of all 250 countries
+for(var i =0;i<res.length;i++)
+{
+console.log(res[i].region)
+}
 }
