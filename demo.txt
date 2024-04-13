@@ -1,3 +1,6 @@
-this is a demo learning session
-this is a new learning session
-if we need to learn it we need to practice
+Json and It's Properties
+What is API?
+Rest Countries API
+Functions :
+
+How to extract the data from the API using XML-HTTP request?

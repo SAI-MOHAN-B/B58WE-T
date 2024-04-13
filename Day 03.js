@@ -45,3 +45,15 @@ var obj = {
     }]
     
     console.log(arr[1].id);
+// Functions:
+// it helps us re-use the code again and again
+// Syntax:function function name(){return}
+// Every function will have the return keyword!!!
+// here foo is user defined
+// return will take the result to the outside of the function
+function foo(arr){
+    console.log(arr)
+    }
+    console.log(foo([12,13,14,15,16,17]));
+    console.log(foo(23,32));
+    console.log(foo(232,321));
