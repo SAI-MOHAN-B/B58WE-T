@@ -23,7 +23,7 @@ var obj = {
         }
   console.log(res.state);
   console.log(res["state"]);
-  Array Of JSON:
+  // Array Of JSON:
   var arr = [
     {
       "userId": 1,
