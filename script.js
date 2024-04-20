@@ -72,5 +72,33 @@ var res = function (arr) {
     }
     return temp;
 }
+
+// IIFE:
+// Immediately Invoked Function Execution!!
+(function(a,b){
+    console.log(a*b);
+    })(12,13)
 console.log(res([12, 13, 14, 15, 16, 17, 18]));
+
+// ES6 Operators:
+// Spread and Rest Parameter..
+
+
+// ...
+// Expanding the arrays
+let arr = ["guvi","geek","research park"]
+console.log(...arr);
+
+function foo(a,b,c){
+return a+b+c;
+}
+console.log(foo(...arr));
+
+//Combining the arrays
+var arr1 = [12,13,14];
+var arr2 = [15,16,17];
+var res = [...arr1,...arr2];
+console.log(res);
+
+
 
