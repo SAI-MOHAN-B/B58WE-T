@@ -101,4 +101,14 @@ var res = [...arr1,...arr2];
 console.log(res);
 
 
+// ES6 Operators:
+// Spread and Rest Parameter..
 
+function data_res(a,b,...res){
+    console.log(res);
+  return a+b;
+  }
+  console.log(data_res(12,13,14,15,16,17,18));
+  // rest parameter
+  // rest stands for the remaining...
+  // it is applicable to the functions
