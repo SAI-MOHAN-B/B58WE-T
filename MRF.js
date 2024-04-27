@@ -69,3 +69,26 @@ console.log(res);
 var casia = res.filter((ele)=>ele.region == "Asia");
 var cpopu = casia.reduce((acc,cv)=>acc+cv.population,0);
 console.log(cpopu);
+
+
+
+
+var arr1=[3, 'q', 'q', 'q', 2, 3, 'q', 3, 'q', 2, 4, 9, 3];
+// This Problem can be solved by using Object based Approach
+var min_occ = 1;
+var obj = {}
+var element;
+for(var i =0;i<arr1.length;i++){
+var ele = arr1[i];
+if(obj[ele]){
+obj[ele]++
+}
+else{
+obj[ele]=1;
+}
+if(obj[ele]>min_occ){
+min_occ = obj[ele]
+element = ele;
+}
+}
+console.log(`Element ${element} occured ${min_occ} times `);
