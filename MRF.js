@@ -63,3 +63,9 @@ var arr = [12,13,14,15];
 
 var res = arr.reduce((acc,cv)=>acc+cv,0);
 console.log(res);
+
+
+// Find the sum of total Poulation of all the countries that belongs to asia region
+var casia = res.filter((ele)=>ele.region == "Asia");
+var cpopu = casia.reduce((acc,cv)=>acc+cv.population,0);
+console.log(cpopu);
