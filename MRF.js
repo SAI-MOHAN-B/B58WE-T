@@ -41,3 +41,25 @@ var arr = [12,13,14,15,16,17];
  // If the condition is successfull it will be in resultant array
  var res =  arr.filter((ele)=>ele%2==0);
  console.log(res);
+
+
+
+// MRF Method and Examples...
+// Map,Reduce,filter
+var arr = [12,13,14,15];
+// Result: 54
+
+// Step 01: apply for loop
+// Step 02: take a sum variable
+// Step 03: Sum = sum+ arr[i]
+// Step 04: return sum
+
+
+// Reduce function
+//It helps us to reduce the array element into single values
+// Syntax: arrayname.reduce((acc,cv)=>acc+cv,0)
+// here acc: accumulator, Initial value
+// cv represents the current element
+
+var res = arr.reduce((acc,cv)=>acc+cv,0);
+console.log(res);
