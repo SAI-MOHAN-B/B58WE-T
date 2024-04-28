@@ -1,0 +1,51 @@
+HTML Intro,
+Tags,
+Elements
+form Elements
+
+Into to CSS
+Selectors
+Flex
+Media queries
+icons and Units
+
+
+Bootstrap 4.7
+Project:
+1.Pan Card
+2. Social Cards
+
+Netlify Deployment
+
+
+
+Self-Closing and Non-SelfClosing
+
+self-Closing:meta etc
+Non-SelfClosing:title,body..
+
+Elements:
+Combination Of Tag+Content
+p Tag:
+p represents the Paragraph Tag
+h1-h6 Tags
+
+Linking the Document
+a tag:
+a represents the anchor tag
+Hyperlinking
+
+here href represents the Attribute
+Attribute represents the additional Information
+
+here href holds the link for the document where it has to be redirected!!
+By default a tags opens the document in the same page
+
+we have one more attribute called target
+target="_blank" represents the document that has to be opened in the new tab
+
+Collecting the details from the user
+
+1. form tags
+2. Labels:
+Helps us to identify the input type Elements
