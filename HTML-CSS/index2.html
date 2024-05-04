@@ -1,0 +1,106 @@
+div section article
+CSS Intro
+Types of CSS
+Block level as well as the Inline Elements
+Important!
+
+CSS: cascaded style Sheet
+To add more Styling Properties
+
+Types of CSS:
+1.Inline
+2.internal
+3.External
+
+
+Inline : It is added to the single Element
+syntax:<div style="background-color: green;">this is div</div>
+
+Internal Css:
+Multiple Elements
+
+Selectors:
+class,id,tag,universal
+
+class selectors:
+It is used to apply css properties for more than 1 Elements
+syntax: .classname{
+
+}
+
+
+id selectors:
+it is used to apply for a single Element
+syntax:#idname{
+
+}
+
+Tag Selectors:
+if you wanted to apply for a group of tags
+Syntax: tagname{
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Web Page</title>
+    <style>
+        .main{
+            background-color: green;
+            font-family: 'Courier New', Courier, monospace;
+            color: burlywood;
+        }
+        #main1{
+            background-color: aquamarine;
+            color: brown;
+        }
+        h3{
+            background-color: green;
+            color: turquoise;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<!---Inline CSS-->
+<div style="background-color: green;font-family: 'Courier New', Courier, monospace;">this is div</div>
+<!--Internal Css-->
+<p class="main">this is p</p>
+<h3>this is h3</h3>
+
+<span class="main">this is span</span>
+<h3>this is h3</h3>
+
+<div id="main1">this is a ID div</div>
+
+<h3>this is h3</h3>
+<h3>this is h3</h3>
+
+
+</body>
+</html>
+
+Priorities:
+id>class>tag
+
+2. for a single Element can I apply inline css as well as internal css??
+yes
+
+inline css > internal css > External CSS
+
+!Important Keyword:
+To override the Highest Priority
+
+
+
+Block level Elements:
+They always start on the new Line:
+p,div,section,article...
+
+Inline:The y always start on the same Line
+ex: span
+
+we can convert block level to inline also inline to block vice versa
+using a property called display
