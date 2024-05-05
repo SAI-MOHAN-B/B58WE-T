@@ -1,0 +1,26 @@
+Box Model
+Pan-card
+webkata
+
+
+Box-Model:
+A box model is basically a baox that will be wrapped around every HTML element..
+Box Model Consist of:
+Margin
+Border
+Padding
+
+
+margin: It is a imaginary space around a html element
+it is measured in px:
+syntax:margin:top right bottom left
+
+it will be added in the cyclic order
+
+
+Border: it is a thick visible Line
+style,color,width
+border:with,style,color
+
+
+Padding:it is a imaginary space around a content
