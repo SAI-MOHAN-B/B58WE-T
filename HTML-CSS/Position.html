@@ -1,0 +1,110 @@
+Position Properties and Flex
+
+Position Properties:
+
+Even Though You have  prorperties such as left,right,top,bottom
+On what factors they have been placed
+1.static
+2.relative
+3.absolute
+4.fixed
+5.sticky
+
+
+Static:
+This is the default Position Properties:
+They are not getting affected by top,right,bottom,left
+
+relative:
+They are getting affected by top,left,bottom or right
+A space is created for them in the document
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            background-color: green;
+        }
+        .child1{
+            background-color: orange;
+            top:30px;
+            position: relative;
+        }
+        .child2{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="child1">this is child1</div>
+        <div class="child2">this is child2</div>
+    </div>
+</body>
+</html>
+
+absolute:
+They are getting affected by top,left,bottom or right
+No space is created for them in the document
+It will be Positioned w.rto first positioned Elements
+ To apply:
+ Child must be absolute and parent must be relative
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            background-color: green;
+            position:relative;
+        }
+        .child1{
+            background-color: orange;
+            top:30px;
+            position: absolute;
+        }
+        .child2{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="child1">this is child1</div>
+        <div class="child2">this is child2</div>
+    </div>
+</body>
+</html>
+
+Fixed:
+Once you fix a certain Positions such as top,right,bottom,left
+they are not get affected by scrolling
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            background-color: green;
+            top:30px;
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">this is div</div>
+<span style="padding-bottom: 300%;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus dicta nemo minima nostrum a quae inventore qui doloremque soluta recusandae magni placeat enim, modi, aliquid tempora itaque architecto expedita non!</span>
+</body>
+</html>
+
+Sticky:
+It get affected by scrolling
+Once Youy reach their position, it wont' be affected
