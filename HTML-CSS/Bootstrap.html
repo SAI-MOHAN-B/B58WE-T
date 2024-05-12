@@ -1,0 +1,105 @@
+Flex box
+webkata 
+Media query 
+Bootstrap 4.7
+
+Flex Box:
+Flexible Layout
+It's a  2D 
+
+Alignment and responsive Design
+
+Bootstrap is Built On the Top of the FlexBox
+
+Two main Components of FlexBox:
+Flex container
+Flex Items
+
+
+To apply flex:
+Syntax:display:flex;
+
+
+The flex container Properties are:
+flex-direction
+flex-wrap
+alig-content
+Justify Content:
+
+
+Flex-wrap:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .flex-container{
+        display:flex;
+        background-color: green;
+        height:300px;
+     }
+     .flex-container>div{
+      background-color: whitesmoke;
+      width:100px;
+      height:100px;
+      margin:10px;
+     }
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+    </div>
+</body>
+</html>
+
+Media Query:
+RWD: Responsive web Design
+@media screen and(max-width:30px){
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       @media screen and (max-width:500px) {
+        div{
+            background-color: green;
+        }
+       }
+
+       @media screen and (min-width:600px) {
+        div{
+            background-color: orange;
+            font-family: 'Courier New', Courier, monospace;
+        }
+       }
+    </style>
+</head>
+<body>
+    <div>this is div</div>
+</body>
+</html>
+CDN:content delivery Network
+
+
+Extra small: if your device width is lesser than 576px 
+then 100%
+
+small:if your device width is between 576-768px
+then max witdh allowed  is 540px
+
+md:if your device width is between 768-992px
+then max witdh allowed  is 720px
+
+L:if your device width is between 992-1200
+then max witdh allowed  is 960px
