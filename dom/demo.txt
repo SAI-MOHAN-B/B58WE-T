@@ -1,0 +1,81 @@
+What is DOM
+DOM Tree Structure
+DOM Methods
+addEventListeners
+append vs AppendChild
+Functional Based Approach
+
+Project:
+
+What is DOM and Why do we need it?
+DOM:document Object Model
+It helps us to Create the HTML elements Dynamically
+
+
+3 steps are Invloved In Creating the HTML elements
+
+
+1st step:
+creating a HTML Element:
+var variable_name = document.createElement("tagname")
+
+Note On InnerHTML:
+It is a Property to add/modify the Contents to HTML elements
+If you pass a tag inside the innerHTML property, then itw ill convert into the HTML elements
+
+
+innertText:
+It is a Property to add/modify the Contents to HTML elements
+
+setAttribute:
+it is used to add the Attribute to the HTML elements:
+setAttribute(attrname,attrvalue)
+
+Parent and Child:
+parent.append(child)
+
+// Creating the HTML Element
+var ele = document.createElement("div");
+
+// using the innerHTML property
+ele.setAttribute("class","main");
+ele.setAttribute("id","main1");
+
+
+//Child:
+var child = document.createElement("p");
+child.innerHTML="this is p";
+
+//parent.append(child);
+ele.append(child)
+
+// To see the Output in the Browser
+document.body.append(ele);
+
+
+var container = document.createElement("div");
+container.setAttribute("class","container")
+
+var row = document.createElement("div");
+row.setAttribute("class","row")
+
+
+var col = document.createElement("div");
+col.setAttribute("class","col");
+col.innerHTML = "this is col";
+
+row.append(col);
+container.append(row);
+document.body.append(container);
+
+
+DOM Methods:
+Already You have HTML elements
+You wanted to modify the existing HTML elements..
+
+
+document.getElementById();
+:It is applicable for HTML elements having id Attribute
+It is used to retrive the single element based on the id Attribute
+
+Return Type: HTML element
