@@ -1,0 +1,138 @@
+Event-loop Mechanism
+What is Promise and Why do we need it
+Promise Handling
+Promise Chaining
+Promise.all vs Promise.allSettled
+
+Event Loop Mechanism:
+1.callstack
+2.webapi
+3.callback queue
+4.event loop
+
+Call-stack:
+It is used to keep the track execution of the functions that are to be executed
+It is the place where the actual execution Happens
+var a = ()=>{
+    b();
+    console.log("Hello A !!!")
+}
+
+var b = () =>{
+console.log("Hello B !!!")
+}
+
+a();
+
+
+Web-API:
+It is the place Where the Tine Consuming Operations wait 
+
+CallBack Queue:
+It is the place where the asynchronous functions wait one after another
+It works in FIFO pattern
+
+
+Event Loop:
+It is between call stack and call back queue
+The main Purpose of Call stack is to check whether the call stack is empty or not
+if it is empty it will push the function from the call bback queue to call stack for execution
+
+
+What is Promise?
+A promise is a Object which encapsulates the result of asynchronous Operations
+
+or 
+
+A Promise Is a Object which Holds the result of asynchronous Operations
+Syntax: var variablename = new Promise((resolve,reject)=>{})
+
+A promise Object Consist of 3 states:
+1.pending
+2.Fullfilled
+3.Rejected
+
+
+var p1  =  new Promise((resolve,reject)=>{
+    reject("This is rejected!!!")
+    resolve("This is resolved state")
+    
+});
+console.log(p1);
+
+var p1  =  new Promise((resolve,reject)=>{
+var age = parseInt(prompt("Enter the age??"));
+if(age>=18){
+    resolve("You are eligible to vote!!")
+}
+else{
+    reject("You are not eligible to vote!!")
+}
+    
+});
+console.log(p1);
+
+How to handle The promise / How To access the value inside the Promise?
+.then(()): for resolved state
+.catch(): for rejected state
+
+
+function foo(){
+    return new Promise((resolve,reject)=>reject("This is rejected"));
+}
+
+foo().then((data)=>console.log(data)).catch((error)=>console.log(error))
+
+Advantages:
+Here we are storing the Promise object in a variable
+it can be used to create a Multiple dependent asynchronous Operations
+
+
+function foo(num){
+return new Promise((resolve,reject)=>{
+    setTimeout(()=>resolve(2*num),3000)
+})    
+}
+foo(5).then((data)=>{
+    console.log(data);
+    return foo(data);
+}).then((data1)=>{
+    console.log(data1);
+    return foo(data1);
+}).then((data2)=>console.log(data2))
+
+Promise.all:
+It will take array of promises as the value
+It will wait Untill All the promises are getting resolved!
+
+
+Promise.allSettled:
+It will display both resolved as well as rejected
+
+var p1  = new Promise((resolve,reject)=>{
+    if(5>4){
+        setTimeout(()=>resolve("This is resolved p1 after 5 sec"),5000)
+    }
+    else{
+        setTimeout(()=>reject("This is rejected p1 after 3 sec"),3000)
+    }
+});
+var p2  = new Promise((resolve,reject)=>{
+    if(5<4){
+        setTimeout(()=>resolve("This is resolved p2 after 4 sec"),4000)
+    }
+    else{
+        setTimeout(()=>reject("This is rejected p2 after 2 sec"),2000)
+    }
+});
+
+var p3  = new Promise((resolve,reject)=>{
+    if(5<4){
+        setTimeout(()=>resolve("This is resolved p3 after 7 sec"),7000)
+    }
+    else{
+        setTimeout(()=>reject("This is rejected p3 after 4 sec"),2000)
+    }
+});
+
+Promise.allSettled([p3,p1,p2]).then((data)=>console.log(data)).catch((error)=>console.log(error))
